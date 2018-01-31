@@ -1,0 +1,51 @@
+/*font-family*/
+p{
+	font-family: 'Raleway';
+	/*font-family: "Arial" This is also valid*/
+}
+
+h1{
+	font-family: 'Indie Flower', cursive;
+}
+
+/*font-size*/
+h1{
+	/*font-size: 200px;*/	 
+}
+
+p{
+	font-size: 40px;
+}
+
+/*Another way of changing font size is em
+The size of an em value is dynamic. 
+When defining the font-size property, an em is equal to the size of the font that applies to the parent of the element in question. */
+
+span{
+	font-size: 2.0em;
+}
+
+/*font-weight*/
+/*Measure of how thick or thick the font lines should be.*/
+p{
+	font-weight: bold;
+	/*Numeric values can also be used for some fonts ranging from 100-800*/
+}
+
+/*line-height
+it controls the height of the given line.*/
+p {
+	line-height: 1.5;
+}
+
+/*text-align
+Controls of the texts should be aligned to the left, center of right*/
+h1{
+	text-align: center;
+}
+
+/*text-decoration
+It used to give text underline or strikethrough and also overline*/
+p{
+	text-decoration: underline, strikethrough;
+}

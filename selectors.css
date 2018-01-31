@@ -1,0 +1,55 @@
+/*Elements*/
+li{
+
+}
+
+/*Class*/
+.hello{
+
+}
+
+/*id*/
+#name{
+
+}
+
+/*Most commomnly used Selectors*/
+
+/*Star*/
+/*The star symbol will target every single element on the page.It is used to zero out the margins and padding. While this is certainly
+  fine for quick tests, It's advise to never use this in production code. It adds too much
+   weight on the browser, and is unnecessary.*/
+*{
+	margin: 0;
+	width: 0;
+	/**/
+}
+
+/*Decendent Selector*/
+/*It works by taking two or more selectors/ tags names and chains them together.
+Eg. all the anchor(<a herf>) tags inside the li tags */
+li a{
+	color: red;
+}
+
+/*Adjacent Selector
+It will let us select elements that come after another element, not nested inside but select a sibiling*/
+h4 + ul{
+	border: 4px solid red;
+}
+
+/*Attribute Selector
+A way to selector based off of any attribute.*/
+a[herf="http://google.co.in"]{
+	background: blue;
+}
+
+input[type="text"]{
+	background-color: red;
+}
+
+/*nth of type
+Works by taking a number and selects every nth of a specific element*/
+ul:nth-of-type(3){
+	background: purple;
+}

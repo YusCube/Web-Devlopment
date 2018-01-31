@@ -1,0 +1,23 @@
+h1{
+	color: red;
+}
+
+li{
+	color: green;
+	border-color: purple;
+	border-width: 3px;
+	border-style: solid;
+}
+
+h4{
+	color: purple;
+	background: rgb(255, 100, 80);
+	border: 2px dotted blue;
+}
+
+body{
+	background: pink;
+	/*background: url(http://jonvilma.com/images/landscape-8.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}

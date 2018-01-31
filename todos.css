@@ -1,0 +1,15 @@
+body{
+	background: orange;
+}
+
+li{
+	border: 2px red solid;
+}
+
+.highlight{
+	text-decoration: line-through;
+}
+
+#sp{
+	background-color: yellow;
+}
