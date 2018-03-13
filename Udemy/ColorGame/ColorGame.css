@@ -8,7 +8,7 @@ body{
 }
 
 .square{
-	background-color: purple;
+	/*background-color: purple;*/
 	width: 30%;
 	padding-bottom: 30%;
 	margin: 1.66%;
@@ -20,4 +20,16 @@ h1{
 	color: white;
 	margin: 0 auto;
 	text-align: center;
+	padding: 20px;
+}
+
+#menu{
+	background: white;
+	padding: 8px;
+	margin: 0 auto;
+}
+
+#message{
+	`max-width: 800px;
+
 }
