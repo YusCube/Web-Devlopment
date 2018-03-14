@@ -15,6 +15,8 @@ var hardButton = document.querySelector("#hard");
 easyButton.addEventListener("click", function(){
 	this.classList.add("selected");
 	hardButton.classList.remove("selected");
+	this.disabled = true;
+	hardButton.disabled = false;
 	level = 3;
 	for(var i = 3;i < squares.length; i++)
 		squares[i].style.display = "none";
@@ -24,6 +26,8 @@ easyButton.addEventListener("click", function(){
 hardButton.addEventListener("click", function(){
 	this.classList.add("selected");
 	easyButton.classList.remove("selected");
+	this.disabled = true;
+	easyButton.disabled = false;
 	level = 6;
 	for(var i = 3;i < squares.length; i++)
 		squares[i].style.display = "block";
