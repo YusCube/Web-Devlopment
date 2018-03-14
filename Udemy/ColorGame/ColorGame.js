@@ -1,16 +1,16 @@
 //Variables for assigning classes and IDs
+var colors = [];
+var pickedColor;
+var level;
 var squares = document.querySelectorAll(".square");
-var colors = createColors(6);
-var rgbText = document.querySelector("#rgb");
-var pickedColor = colors[randomNumber(6)];
 var h1Header = document.querySelector("h1");
 var h2Header = document.querySelector("h2");
-// var h2SubHeader = document.querySelector("#find");
+var menu = document.querySelector("#menu");
 var message = document.querySelector("#message");
 var playButton = document.querySelector("#btn");
 var easyButton = document.querySelector("#easy");
 var hardButton = document.querySelector("#hard");
-var level;
+
 
 easyButton.addEventListener("click", function(){
 	this.classList.add("selected");
@@ -35,23 +35,24 @@ function playGame(){
 	for(var i = 0;i < squares.length; i++){
 		//Set Square Colors
 		squares[i].style.background = colors[i];
-		h1Header.style.backgroundColor = "rgb("+randomNumber(256)+", "+randomNumber(256)+", "+randomNumber(256)+")";
+		// h1Header.style.backgroundColor = "rgb("+randomNumber(256)+", "+randomNumber(256)+", "+randomNumber(256)+")";
 		
 		//Listen for clicks from the squares
 		squares[i].addEventListener("click", function(){
 			var clickedColor = this.style.background;
 			if (clickedColor === pickedColor){
-				rgbText.textContent = this.style.background;
 				h1Header.style.backgroundColor = clickedColor;
+				menu.style.backgroundColor = clickedColor;
 				h2Header.textContent = "You have found this "+clickedColor+ " color!!!";
-				message.textContent = "Correct!!!";
+				message.innerHTML = "<em>Correct!!!</em>";
+				playButton.textContent = "Play Again...?";
 				for(var i = 0;i < squares.length; i++){
 					squares[i].style.background = clickedColor;
 				}
 			}
 			else{
 				this.style.background = document.body.style.backgroundColor;
-				message.textContent = "Try Again :(";
+				message.innerHTML = "<em>Try Again :(</em>";
 			}
 			return (clickedColor, pickedColor);
 		});
@@ -78,6 +79,10 @@ function reset(){
 	colors = createColors(level);
 	pickedColor = colors[randomNumber(level)];
 	h2Header.textContent = "Find "+pickedColor+" color";
-	message.textContent = "";
+	message.textContent = null;
+	h1Header.style.backgroundColor = "#13ff00f7";
+	menu.style.backgroundColor = "#13ff00f7";
+	playButton.textContent = "New Colors";
+	playButton.disabled = false;
 	playGame();
 }

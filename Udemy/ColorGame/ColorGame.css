@@ -21,10 +21,11 @@ body{
 }
 
 h1{
-	color: white;
+	color: black;
 	margin: 0;
 	text-align: center;
 	padding: 20px 0;
+	background-color: #13ff00f7;
 }
 h2{
 	color: white;
@@ -32,10 +33,12 @@ h2{
 	text-align: center;
 	padding: 20px;
 	font-weight: normal;
+	height: 30px;
+	transition: all 0.3s;
 }
 
 #menu{
-	background: white;
+	background-color: #13ff00f7;
 	/*padding: 10px;*/
 	margin-bottom: 15px;
 	text-align: center;
@@ -46,6 +49,7 @@ h2{
 #message{
 	display: inline-block;
 	width: 30%;
+	transition: all 0.15s;
 }
 
 button{
@@ -59,14 +63,15 @@ button{
     padding: 0 25px;
     letter-spacing: 1px;
     transition: all 0.4s;
+    outline: none;
 }
 
 .selected{
 	background-color: black;
-    color: white;
+    color: #13ff00f7;
 }
 
 button:hover {
     background-color: black;
-    color: white;
+    color: #13ff00f7;
 }
